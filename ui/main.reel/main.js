@@ -24,6 +24,8 @@ exports.Main = Component.specialize(/** @lends Main# */ {
 
     handleCompletedCheckboxAction: {
         value: function (event) {
+            this.activeTodo.completed = true;
+            
         }
     }
 
