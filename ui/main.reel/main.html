@@ -13,16 +13,6 @@
                 "element": {"#": "main"}
             }
         },
-        "actionEventListener": {
-            "prototype": "montage/core/event/action-event-listener",
-            "properties": {
-                "action": "createTodo",
-                "handler": {"@": "owner"}
-            },
-            "_dev": {
-                "isHidden": true
-            }
-        },
         "newTodo": {
             "prototype": "digit/ui/text-field.reel",
             "properties": {
@@ -31,14 +21,7 @@
                 "dir": "ltr",
                 "draggable": "true",
                 "placeholderValue": "Text"
-            },
-            "listeners": [
-                {
-                    "type": "action",
-                    "useCapture": false,
-                    "listener": {"@": "actionEventListener"}
-                }
-            ]
+            }
         },
         "rangeController": {
             "prototype": "montage/core/range-controller",
