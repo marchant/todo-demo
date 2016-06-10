@@ -17,6 +17,16 @@
                 "todoController": {"@": "rangeController"}
             }
         },
+        "checkbox": {
+            "prototype": "digit/ui/checkbox.reel",
+            "properties": {
+                "element": {"#": "checkbox"},
+                "checked": true,
+                "contenteditable": "true",
+                "dir": "ltr",
+                "draggable": "true"
+            }
+        },
         "newTodo": {
             "prototype": "digit/ui/text-field.reel",
             "properties": {
@@ -56,13 +66,13 @@
             "prototype": "montage/ui/text.reel",
             "properties": {
                 "element": {"#": "text1"},
-                "contenteditable": "true",
+                "contenteditable": "false",
                 "dir": "ltr",
                 "draggable": "true",
                 "value": "Text"
             },
             "bindings": {
-                "value": {"<-": "@repetition:iteration.object"}
+                "value": {"<-": "@repetition:iteration.object.title"}
             }
         }
     }
@@ -72,6 +82,7 @@
     <div data-montage-id="main" data-montage-skin="light" class="Main">
         <input data-montage-id="newTodo" type="text">
         <ul data-montage-id="repetition">
+            <input type="checkbox" data-montage-id="checkbox">
             <li data-montage-id="text1"></li>
         </ul>
     </div>
