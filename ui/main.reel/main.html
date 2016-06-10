@@ -10,7 +10,11 @@
     {
         "owner": {
             "properties": {
-                "element": {"#": "main"}
+                "element": {"#": "main"},
+                "contenteditable": "true",
+                "dir": "ltr",
+                "draggable": "true",
+                "todoController": "@rangeController"
             }
         },
         "newTodo": {
@@ -21,7 +25,14 @@
                 "dir": "ltr",
                 "draggable": "true",
                 "placeholderValue": "Text"
-            }
+            },
+            "listeners": [
+                {
+                    "type": "action",
+                    "useCapture": false,
+                    "listener": {"@": "owner"}
+                }
+            ]
         },
         "rangeController": {
             "prototype": "montage/core/range-controller",
