@@ -20,6 +20,11 @@ exports.Main = Component.specialize(/** @lends Main# */ {
             this.todoController.add(newTodo);
             event.target.value = null;
         }
+    },
+
+    handleCompletedCheckboxAction: {
+        value: function (event) {
+        }
     }
 
 });
