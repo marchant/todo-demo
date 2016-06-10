@@ -16,8 +16,8 @@
         "actionEventListener": {
             "prototype": "montage/core/event/action-event-listener",
             "properties": {
-                "action": "addContent",
-                "handler": {"@": "rangeController"}
+                "action": "createTodo",
+                "handler": {"@": "owner"}
             },
             "_dev": {
                 "isHidden": true
@@ -57,6 +57,19 @@
                 "dir": "ltr",
                 "draggable": "true"
             }
+        },
+        "text1": {
+            "prototype": "montage/ui/text.reel",
+            "properties": {
+                "element": {"#": "text1"},
+                "contenteditable": "true",
+                "dir": "ltr",
+                "draggable": "true",
+                "value": "Text"
+            },
+            "bindings": {
+                "value": {"<-": "@repetition:iteration.object"}
+            }
         }
     }
     </script>
@@ -65,7 +78,7 @@
     <div data-montage-id="main" data-montage-skin="light" class="Main">
         <input data-montage-id="newTodo" type="text">
         <ul data-montage-id="repetition">
-            <li></li>
+            <li data-montage-id="text1"></li>
         </ul>
     </div>
 </body>
