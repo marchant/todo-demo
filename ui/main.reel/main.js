@@ -12,5 +12,14 @@ exports.Main = Component.specialize(/** @lends Main# */ {
         value: function Main() {
             this.super();
         }
+    },
+
+    handleNewTodoAction: {
+        value: function (event) {
+            var newTodo = { title: event.target.value };
+            this.todoController.add(newTodo);
+            
+        }
     }
+
 });
