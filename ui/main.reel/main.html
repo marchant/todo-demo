@@ -75,11 +75,17 @@
                 "activeIterations.0.object": {"<-": "@owner.activeTodo"}
             }
         },
+        "text": {
+            "prototype": "montage/ui/text.reel",
+            "properties": {
+                "value": "Text"
+            }
+        },
         "text1": {
             "prototype": "montage/ui/text.reel",
             "properties": {
-                "element": {"#": "text1"},
-                "contenteditable": "false",
+                "element": {"#": "text2"},
+                "contenteditable": "true",
                 "dir": "ltr",
                 "draggable": "true",
                 "value": "Text"
@@ -96,6 +102,7 @@
         <input data-montage-id="newTodo" type="text">
         <ul data-montage-id="repetition">
             <li data-montage-id="text1">
+                <span data-montage-id="text2"></span>
                 <input type="checkbox" data-montage-id="completedCheckbox">
             </li>
         </ul>
