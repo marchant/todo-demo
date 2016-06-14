@@ -16,7 +16,7 @@ exports.Main = Component.specialize(/** @lends Main# */ {
 
     handleNewTodoAction: {
         value: function (event) {
-            var newTodo = { title: event.target.value, completed: true };
+            var newTodo = { title: event.target.value, completed: false };
             this.todoController.add(newTodo);
             event.target.value = null;
         }
